@@ -37,6 +37,7 @@ public partial class PetsPage : ContentPage
 				Birthday = birthdayEntryField.Date,
 				Picture = pet_pictureEntryField.Text
 			});
+			
 			_editPetId = 0;
 		}
 
@@ -45,6 +46,8 @@ public partial class PetsPage : ContentPage
 		sizeEntryField.Text = string.Empty;
 		birthdayEntryField.Date = DateTime.MinValue;
 		pet_pictureEntryField.Text = string.Empty;
+
+		listView.ItemsSource = await _dbService.GetPets();
 	}
 
 	private async void listView_ItemTapped(object sender, ItemTappedEventArgs e)
