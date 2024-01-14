@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DogSPA.MyPetsPage"
+             Title="MyPetsPage">
+    <ListView x:Name="listView" HasUnevenRows="True">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout BackgroundColor="Lavender" HeightRequest="400" Padding="10">
+                        <Label Text="{Binding Name}" TextColor="Purple" FontAttributes="Bold" Margin="3" HorizontalOptions="Center" FontSize="20" />
+                        <Image Source="{Binding Picture}" HeightRequest="300" WidthRequest="200" Aspect="AspectFit"/>
+                        <Label Text="{Binding Race}" HorizontalOptions="Center" />
+                        <Label Text="{Binding Size}" HorizontalOptions="Center" />
+                        <Label Text="{Binding Birthday}" HorizontalOptions="Center" />
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

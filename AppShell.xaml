@@ -18,8 +18,13 @@
             />
 
         <ShellContent
-            Title ="My Pets"
+            Title ="Manage Pets"
             ContentTemplate="{DataTemplate local:PetsPage}"
+            />
+
+        <ShellContent
+            Title ="My Pets"
+            ContentTemplate="{DataTemplate local:MyPetsPage}"
             />
     </TabBar>
 

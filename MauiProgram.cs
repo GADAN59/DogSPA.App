@@ -14,7 +14,8 @@ public static class MauiProgram
 			});
 
 		builder.Services.AddTransient<PetsPage>();
-		builder.Services.AddSingleton<LocalDbService>();
+        builder.Services.AddTransient<MyPetsPage>();
+        builder.Services.AddSingleton<LocalDbService>();
 		return builder.Build();
 	}
 }
